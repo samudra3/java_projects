@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" autoplay></video>
+    <h1>Change background to your choice and select the one you like most</h1><br>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Access the video element
+    const video = document.getElementById('video');
+
+    // Access the start and stop buttons
+    const startButton = document.getElementById('start');
+    const stopButton = document.getElementById('stop');
+
+    // Function to start video streaming
+    function startVideo() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(err => {
+                console.error("Error accessing the camera: ", err);
+            });
+    }
+
+    // Start video streaming when the page loads
+    startVideo();
+
+    // Function to generate random colors and change background
+    let next = null;
+    function randomColor() {
+        const interval = "0123456789ABCDEF";
+        let hex = '#';
+        for (let i = 0; i < 6; i++) {
+            hex += interval[Math.floor(Math.random() * interval.length)];
+        }
+        document.body.style.backgroundColor = hex;
+    }
+
+    // Event listener for the start button
+    startButton.addEventListener("click", function() {
+        if (next == null) {
+            next = setInterval(randomColor, 1000);
+            startButton.disabled = true;
+        }
+    });
+
+    // Event listener for the stop button
+    stopButton.addEventListener("click", function() {
+        if (next !== null) {
+            clearInterval(next);
+            next = null;
+            startButton.disabled = false;
+        }
+    });
+</script>
+</html>

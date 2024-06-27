@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:grey
+;color: rgb(0, 0, 0);">
+    <h1>In this webpage  there is a section in which you can write your thoughts whatever is going on in your head </h1>
+    <h3>There are two buttons below the space one tell you about total word count<br>
+    and other will give you an avatar based upon what you have written.</h3>
+    <label for="feedback"> WORD PIIT</label><br>
+    <textarea placeholder="write every thoughts of your mind" id="feedback" ></textarea><br><br>
+    <div id="located">
+
+      
+        <button class="hover">count</button>
+        <button  class="avat" style="margin-left: 20px;">avatar</button>
+      
+    </div>
+    <div id="paragraph"></div>
+
+</body>
+<script>
+let feedback= document.getElementById("feedback");
+let hover=document.querySelector(".hover");
+let avat=document.querySelector(".avat");
+let array= ""
+let machine=function counter(){}
+machine.prototype.cutter = function (array){
+ console.log((array.replace(" ")).length)
+ return (array.split(/\s+/)).length
+}
+hover.addEventListener("click", function(e){
+    console.log(e)
+    e.preventDefault()
+    e.stopPropagation()
+    console.log(feedback.value)
+array=feedback.value
+console.log(array)
+let words= new machine
+let hello=words.cutter(array)
+document.getElementById("paragraph").innerHTML=`<p>the total no of words count is ${hello}</p>`
+
+
+
+})
+
+
+
+
+</script>
+
+
+</html>

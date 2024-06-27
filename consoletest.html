@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=e, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <div id="console">
+        <h1>HOW YOU DOIN</h1>
+        <p id="on">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni architecto perspiciatis repellendus iste. Beatae explicabo optio reiciendis fugit, corporis illo maxime excepturi reprehenderit atque a nam quos adipisci ipsum!Saepe blanditiis reiciendis laborum magni obcaecati incidunt est assumenda, soluta minus similique amet et officiis dolorem odio nisi vero delectus eos quo aut vitae, consequatur magnam ipsam maxime adipisci! <span>Nulla et illo, quo repellat aperiam magni saepe.</p> 
+            <p class="two"> magni aut sequi ea. Qui animi a sit quod, quam ipsa amet eius, ullam tempore ea totam ipsum? Debitis, nesciunt eius.</span><span>Ex aspernatur inventore sed repellendus iste vel sapiente, magnam impedit fugit magni repudiandae quam dolore ab ipsum, saepe suscipit quaerat adipisci necessitatibus! Repellat sequi a nostrum      </p>
+                <p class="one">laboriosam delectus labore!</span><span>Voluptatem modi, dignissimos et esse ullam odit cumque at error. Corrupti saepe vitae laudantium iusto neque dolorum. Labore, numquam id nostrum necessitatibus ratione quia quae harum? Explicabo obcaecati consequuntur quidem.</p>
+
+              <P class="two"> </span><span>Sit rerum unde at aut repudiandae in nulla, quidem distinctio magnam id ratione ducimus officiis, eos est amet cupiditate labore obcaecati laborum molestias? Iste nemo ducimus assumenda, minima cum exercitationem.</span><span>Dolorem voluptas animi eius nobis perferendis ab ea fugit. Maxime commodi totam itaque ratione quibusdam sapiente provident modi facilis saepe laudantium cum minima placeat, autem non tempore quidem, accusamus veniam!</p>
+                
+             <p class="one"> </span><span>Inventore, doloremque ex nisi cumque recusandae perferendis iusto ipsa consequatur? Odio quos, ex velit exercitationem illum consequatur adipisci quasi facere qui doloremque, iure ab, deleniti quae expedita necessitatibus dignissimos amet.</span><span>Aperiam iure esse quasi rem quo facilis laboriosam veritatis, assumenda sit, dolores adipisci. Eaque, necessitatibus labore. Debitis similique, dignissimos sapiente magnam quaerat aut iusto, in harum voluptatum impedit officiis. At?</span><span>Quod cum, inventore molestias aut earum, eius impedit </p>
+              <p class="two"> assumenda doloribus perferendis nisi odio, perspiciatis saepe et delectus ad fugiat neque voluptatum beatae ut animi quis? Ut ipsum minima illo explicabo.</span><span>Itaque rerum, maiores dicta debitis, deleniti repudiandae assumenda modi, qui dignissimos in tempora iste dolorem non? Nulla provident harum enim perferendis expedita. Autem quas voluptatibus repudiandae deserunt, dignissimos hic quia?</span><span>Dolores obcaecati repudiandae maiores eaque quis dicta ipsum recusandae, quae hic repellendus a nobis nesciunt ullam ducimus quasi tempore? Nam voluptatem impedit reprehenderit earum doloribus fugiat quod saepe! Suscipit, optio.</span><span>Adipisci necessitatibus ut rem est, nostrum vitae debitis natus illo accusamus facilis ex aut eligendi sint tempore minima suscipit quia aliquid. Ipsa perspiciatis ut praesentium veniam </p>
+
+       
+            </div>
+            <li class="seek">
+                <li>sun</li>
+                <li>moon</li>
+                <li>mars</li>
+                <li>jupiter</li>
+            </li>
+
+
+
+
+
+            
+        </body>
+        <script>
+        //     function clestial(object){
+        //     let add  = document.createElement('li')
+        // add.appendChild(document.createTextNode(`${object}`))
+        //     document.querySelector(".seek").appendChild(add)
+         // }
+        // clestial("galaxy")
+
+        let edit=document.querySelector("li:nth-child(2)")
+        list=document.createElement('li')
+        list.textContent="saturn"
+        edit.replaceWith(list)
+//another method
+const diffapproach=document.querySelector("li:first-child")
+diffapproach.outerHTML="<li>pluto</li>"
+const remove=document.querySelector("li:last-child")
+remove.remove()
+
+        </script>
+</html> 
+  

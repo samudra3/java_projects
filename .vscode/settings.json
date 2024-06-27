@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.commandsToSkipShell": [
+        "\"terminal.integrated.shellArgs.linux\": [\"-l\"],",
+        "\"terminal.integrated.shellArgs.linux\": [\"-1\"],"
+    ]
+}
